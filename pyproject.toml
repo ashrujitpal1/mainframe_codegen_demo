@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "mainframe_codegen_demo"
+version = "0.1.0"
+description = "mainframe-userstory-demo using crewAI"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+crewai = { extras = ["tools"], version = ">=0.70.1,<1.0.0" }
+chromadb = "^0.5.18"
+sentence-transformers = "^3.3.0"
+flask = "^3.1.0"
+
+
+[tool.poetry.scripts]
+mainframe_codegen_demo = "mainframe_codegen_demo.main:run"
+run_crew = "mainframe_codegen_demo.main:run"
+train = "mainframe_codegen_demo.main:train"
+replay = "mainframe_codegen_demo.main:replay"
+test = "mainframe_codegen_demo.main:test"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
